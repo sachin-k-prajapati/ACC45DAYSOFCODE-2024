@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int T;
+	cin>>T;
+	while(T--){
+	    int n;
+	    cin>>n;
+	    int Max=0;
+	    vector<int> v(n,0);
+	    vector<int> a(n,0);
+	    for(int i=0; i<n; i++){
+	        cin>>v[i];
+	        a[v[i]-1]++;
+	        Max=max(Max,a[v[i]-1]);
+	    }
+	    if(Max==n){
+	        cout<<0<<endl;
+	    } else {
+	        cout<<n-Max<<endl;
+	    }
+	}
+	return 0;
+}
